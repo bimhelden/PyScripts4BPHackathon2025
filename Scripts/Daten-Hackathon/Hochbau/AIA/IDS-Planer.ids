@@ -37,6 +37,14 @@
 						<simpleValue>Status</simpleValue>
 					</baseName>
 				</property>
+				<property cardinality="required" dataType="IFCLABEL">
+					<propertySet>
+						<simpleValue>AllplanAttributes</simpleValue>
+					</propertySet>
+					<baseName>
+						<simpleValue>Allright_Bauteil_ID</simpleValue>
+					</baseName>
+				</property>
 			</requirements>
 		</specification>
 	</specifications>

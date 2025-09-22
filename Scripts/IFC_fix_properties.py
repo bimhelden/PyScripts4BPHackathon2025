@@ -1,6 +1,6 @@
 import ifcopenshell
 import json
-import bpy
+# import bpy
 
 
 def read_json_config(ifc_type, json_config):
@@ -20,7 +20,7 @@ def process_ifc_file(ifc_file, json_config):
             print(f"\nProcessing {len(instances)} instances of {ifc_type}")
 
             # Print all property values for each instance
-            for instance in instances[:config['instances']]:
+            for instance in instances:
                 print(f"\nInstance ID: {instance.id()}")
 
                 # Check if the instance has the specified property set
@@ -86,11 +86,12 @@ def handle_property_single_value(property_single_value, properties_values):
 
 if __name__ == "__main__":
     # Specify the IFC file and JSON config file
-    ifc_file = "IFC/Architektur_Tragwerksplanung.ifc"
+    # ifc_file = "IFC/Architektur_Tragwerksplanung.ifc"
+    ifc_file = "IFC_Example/IFC-Modell-Hochbauprojekt.ifc"
     json_config_file = ifc_file.replace('.ifc', '_fix_instructions.json')
 
     # Show the console window of Blender
-    bpy.ops.wm.console_toggle()
+    # bpy.ops.wm.console_toggle()
 
     # Load the JSON config
     with open(json_config_file, 'r', encoding='utf-8') as json_file:
