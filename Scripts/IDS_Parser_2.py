@@ -67,7 +67,8 @@ def parse_ids(xml_file):
 
 
 if __name__ == "__main__":
-    data = parse_ids("C://Users//MatthiasWeise//Downloads//example2.ids")
+    data = parse_ids("C://Users//MatthiasWeise//Downloads//IDS-Planer.ids")
+    # data = parse_ids("C://Users//MatthiasWeise//Downloads//example2.ids")
     output_file = "C://Users//MatthiasWeise//Downloads//example2.json"
     import json
     print(json.dumps(data, indent=2))
