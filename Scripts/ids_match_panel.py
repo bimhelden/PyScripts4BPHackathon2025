@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-IDS Match - Improved Tree Display
-=================================
+IDS Match Panel - With Match Button
+===================================
 
-Verbesserungen:
-1. Tree eingeklappt anzeigen
-2. Alle IFC-Klassen/Nodes zeigen  
-3. Blaue Markierung mit weißer Schrift statt rot
+Fuegt Match-Funktionalitaet hinzu:
+- Match IDS Button
+- Sucht IFC-Klasse in IDS2
+- Zeigt Property-Gruppen aus IDS2 an
 """
 
 import bpy
@@ -14,7 +14,7 @@ import json
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from bpy.types import Operator, Panel, PropertyGroup
-from bpy.props import StringProperty, BoolProperty, CollectionProperty, IntProperty
+from bpy.props import StringProperty, BoolProperty, CollectionProperty, IntProperty, EnumProperty
 
 # IDS Parser Integration
 def get_namespaces(root):
@@ -86,12 +86,12 @@ class SimpleTreeNode(PropertyGroup):
     name: StringProperty(name="Name", default="")
     node_type: StringProperty(name="Type", default="")
     level: IntProperty(name="Tree Level", default=0)
-    expanded: BoolProperty(name="Expanded", default=False)  # Standardmäßig eingeklappt
+    expanded: BoolProperty(name="Expanded", default=False)
     has_children: BoolProperty(name="Has Children", default=False)
 
 class SIMPLE_OT_load_file1(Operator):
     bl_idname = "simple.load_file1"
-    bl_label = "📁 Load IDS File 1"
+    bl_label = "Load IDS File 1"
     filepath: StringProperty(subtype="FILE_PATH")
     filter_glob: StringProperty(default="*.ids;*.xml;*.json", options={'HIDDEN'})
     
@@ -103,7 +103,7 @@ class SIMPLE_OT_load_file1(Operator):
         scene.simple_file1_loaded = True
         scene.simple_file1_name = Path(self.filepath).name
         scene.simple_file1_path = self.filepath
-        self.report({'INFO'}, f"✅ Loaded: {scene.simple_file1_name}")
+        self.report({'INFO'}, f"Loaded: {scene.simple_file1_name}")
         return {'FINISHED'}
     
     def invoke(self, context, event):
@@ -112,7 +112,7 @@ class SIMPLE_OT_load_file1(Operator):
 
 class SIMPLE_OT_load_file2(Operator):
     bl_idname = "simple.load_file2"
-    bl_label = "📁 Load IDS File 2"
+    bl_label = "Load IDS File 2"
     filepath: StringProperty(subtype="FILE_PATH")
     filter_glob: StringProperty(default="*.ids;*.xml;*.json", options={'HIDDEN'})
     
@@ -124,12 +124,78 @@ class SIMPLE_OT_load_file2(Operator):
         scene.simple_file2_loaded = True
         scene.simple_file2_name = Path(self.filepath).name
         scene.simple_file2_path = self.filepath
-        self.report({'INFO'}, f"✅ Loaded: {scene.simple_file2_name}")
+        
+        # Reset match results when new file is loaded
+        scene.simple_match_results = ""
+        scene.simple_has_match_results = False
+        
+        self.report({'INFO'}, f"Loaded: {scene.simple_file2_name}")
         return {'FINISHED'}
     
     def invoke(self, context, event):
         context.window_manager.fileselect_add(self)
         return {'RUNNING_MODAL'}
+
+class SIMPLE_OT_match_ids(Operator):
+    bl_idname = "simple.match_ids"
+    bl_label = "Match IDS"
+    bl_description = "Show IFC class of selected element"
+    
+    def execute(self, context):
+        scene = context.scene
+        
+        # Check if something is selected in tree
+        selected_idx = scene.simple_selected_index
+        if selected_idx < 0 or selected_idx >= len(scene.simple_tree_nodes):
+            self.report({'ERROR'}, "Please select an element from the tree first")
+            return {'CANCELLED'}
+        
+        # Get selected node
+        selected_node = scene.simple_tree_nodes[selected_idx]
+        
+        # Show IFC class of selected element
+        if selected_node.node_type == "Entity":
+            # Entity selected - show its IFC class directly
+            ifc_class = selected_node.name
+            
+            # Store result for display
+            scene.simple_match_results = ifc_class
+            scene.simple_has_match_results = True
+            scene.simple_matched_entity = ifc_class
+            
+            self.report({'INFO'}, f"Selected IFC class: {ifc_class}")
+            
+        elif selected_node.node_type in ["PropertySet", "Property"]:
+            # PropertySet or Property selected - find parent Entity
+            parent_entity = self._find_parent_entity(scene, selected_idx)
+            
+            if parent_entity:
+                # Store result for display
+                scene.simple_match_results = parent_entity
+                scene.simple_has_match_results = True
+                scene.simple_matched_entity = parent_entity
+                
+                self.report({'INFO'}, f"Selected element belongs to IFC class: {parent_entity}")
+            else:
+                self.report({'ERROR'}, "Could not determine parent IFC class")
+                return {'CANCELLED'}
+        else:
+            self.report({'ERROR'}, "Unknown element type selected")
+            return {'CANCELLED'}
+        
+        return {'FINISHED'}
+    
+    def _find_parent_entity(self, scene, selected_idx):
+        """Find the parent Entity for a PropertySet or Property."""
+        selected_node = scene.simple_tree_nodes[selected_idx]
+        
+        # Go backwards to find the Entity (level 0)
+        for i in range(selected_idx - 1, -1, -1):
+            node = scene.simple_tree_nodes[i]
+            if node.level == 0 and node.node_type == "Entity":
+                return node.name
+        
+        return None
 
 class SIMPLE_OT_toggle_node(Operator):
     bl_idname = "simple.toggle_node"
@@ -144,7 +210,7 @@ class SIMPLE_OT_toggle_node(Operator):
         if 0 <= self.node_index < len(scene.simple_tree_nodes):
             node = scene.simple_tree_nodes[self.node_index]
             
-            # Toggle expand/collapse nur für Nodes mit Children
+            # Toggle expand/collapse nur fuer Nodes mit Children
             if node.has_children:
                 node.expanded = not node.expanded
                 print(f"Toggled {node.name}: {'expanded' if node.expanded else 'collapsed'}")
@@ -156,7 +222,7 @@ class SIMPLE_OT_toggle_node(Operator):
 
 class SIMPLE_OT_analyze_ids(Operator):
     bl_idname = "simple.analyze_ids"
-    bl_label = "🔍 Analyze IDS"
+    bl_label = "Analyze IDS"
     
     def execute(self, context):
         scene = context.scene
@@ -197,7 +263,7 @@ class SIMPLE_OT_analyze_ids(Operator):
                 entity_node.name = entity_key
                 entity_node.node_type = "Entity"
                 entity_node.level = 0
-                entity_node.expanded = False  # Standardmäßig eingeklappt
+                entity_node.expanded = False  # Standardmaessig eingeklappt
                 entity_count += 1
                 
                 # Check if entity has properties - FIX: Explizite Boolean-Zuweisung
@@ -210,7 +276,7 @@ class SIMPLE_OT_analyze_ids(Operator):
                     entity_node.has_children = False
                     has_properties = False
                 
-                # Add properties (für Tree-Structure)
+                # Add properties (fuer Tree-Structure)
                 if has_properties:
                     for pset_name, pset_data in entity_data["properties"].items():
                         # PropertySet node
@@ -220,7 +286,7 @@ class SIMPLE_OT_analyze_ids(Operator):
                         pset_node.level = 1
                         pset_node.expanded = False
                         
-                        # FIX: Explizite Boolean-Zuweisung für has_children
+                        # FIX: Explizite Boolean-Zuweisung fuer has_children
                         if isinstance(pset_data, dict) and pset_data:
                             pset_node.has_children = True
                         else:
@@ -240,7 +306,7 @@ class SIMPLE_OT_analyze_ids(Operator):
             scene.simple_show_tree = True
             scene.simple_selected_index = -1  # Keine Selection initially
             
-            self.report({'INFO'}, f"🌳 Parsed IDS: {entity_count} IFC entities, {len(scene.simple_tree_nodes)} total nodes")
+            self.report({'INFO'}, f"Parsed IDS: {entity_count} IFC entities, {len(scene.simple_tree_nodes)} total nodes")
             return {'FINISHED'}
             
         except ET.ParseError as e:
@@ -268,31 +334,53 @@ class SIMPLE_PT_ids_panel(Panel):
         
         # File Loading Section
         box = layout.box()
-        box.label(text="📂 Load IDS Files", icon='FILE_FOLDER')
+        box.label(text="Load IDS Files", icon='FILE_FOLDER')
         
         row = box.row()
         col = row.column()
         col.operator("simple.load_file1", text="Load IDS File 1", icon='IMPORT')
         if getattr(scene, 'simple_file1_loaded', False):
-            col.label(text=f"✅ {getattr(scene, 'simple_file1_name', '')}", icon='CHECKMARK')
+            col.label(text=f"Loaded: {getattr(scene, 'simple_file1_name', '')}", icon='CHECKMARK')
         
         col = row.column()
         col.operator("simple.load_file2", text="Load IDS File 2", icon='IMPORT')
         if getattr(scene, 'simple_file2_loaded', False):
-            col.label(text=f"✅ {getattr(scene, 'simple_file2_name', '')}", icon='CHECKMARK')
+            col.label(text=f"Loaded: {getattr(scene, 'simple_file2_name', '')}", icon='CHECKMARK')
         
         # Analysis Section
         if getattr(scene, 'simple_file1_loaded', False):
             box = layout.box()
-            box.label(text="🔍 Analysis", icon='ZOOM_ALL')
+            box.label(text="Analysis", icon='ZOOM_ALL')
             row = box.row()
             row.operator("simple.analyze_ids", text="Analyze IDS", icon='OUTLINER_OB_MESH')
+        
+        # Match Section - nur wenn Tree angezeigt (IDS2 nicht mehr erforderlich)
+        if getattr(scene, 'simple_show_tree', False):
+            
+            box = layout.box()
+            box.label(text="IFC Class Info", icon='INFO')
+            
+            # Match button
+            row = box.row()
+            row.operator("simple.match_ids", text="Show IFC Class", icon='VIEWZOOM')
+            
+            # Show IFC class of selected element
+            if getattr(scene, 'simple_has_match_results', False):
+                matched_entity = getattr(scene, 'simple_matched_entity', '')
+                
+                box.separator()
+                box.label(text="Selected Element:", icon='RADIOBUT_ON')
+                
+                # Show IFC class in a prominent way
+                row = box.row()
+                row.scale_y = 1.2
+                row.label(text=f"IFC Class: {matched_entity}", icon='MESH_CUBE')
         
         # Tree Display Section
         if getattr(scene, 'simple_show_tree', False):
             box = layout.box()
             filename = getattr(scene, 'simple_file1_name', 'File 1')
-            box.label(text=f"🌳 Tree: {filename}", icon='OUTLINER_OB_MESH')
+            box.label(text=f"Tree: {filename}", icon='OUTLINER_OB_MESH')
             
             if hasattr(scene, 'simple_tree_nodes') and len(scene.simple_tree_nodes) > 0:
                 self._draw_tree_nodes(box, scene)
@@ -320,16 +408,15 @@ class SIMPLE_PT_ids_panel(Panel):
         for _ in range(node.level):
             row.label(text="", icon='BLANK1')
         
-        # NEUE: Blaue Markierung mit weißer Schrift statt rot
+        # Blaue Markierung fuer Selection
         if index == selected_idx:
-            # Blue background instead of red alert
+            # Blauer Hintergrund fuer ausgewaehlten Node
             sub = row.row()
-            sub.alert = False  # Kein rotes Alert mehr
-            sub.operator("simple.toggle_node", text=node.name, depress=True)  # Blauer "pressed" Style
-            sub.operator("simple.toggle_node", text="").node_index = index
-            sub.prop(scene, "simple_selected_index", text="", icon='RADIOBUT_ON')  # Blue radio button
+            sub.alert = False
+            op = sub.operator("simple.toggle_node", text=node.name, depress=True)
+            op.node_index = index
         else:
-            # Expand/Collapse icon für Nodes mit Children
+            # Expand/Collapse icon fuer Nodes mit Children
             if node.has_children:
                 icon = 'TRIA_DOWN' if node.expanded else 'TRIA_RIGHT'
                 row.operator("simple.toggle_node", text="", icon=icon).node_index = index
@@ -364,7 +451,7 @@ class SIMPLE_PT_ids_panel(Panel):
             if child_node.level == parent_node.level + 1:
                 self._draw_single_node(layout, scene, child_node, i, selected_idx)
                 
-                # Rekursiv für expanded PropertySets
+                # Rekursiv fuer expanded PropertySets
                 if child_node.expanded and child_node.has_children:
                     self._draw_children(layout, scene, i, selected_idx)
 
@@ -374,6 +461,7 @@ def register():
     bpy.utils.register_class(SIMPLE_OT_load_file2)
     bpy.utils.register_class(SIMPLE_OT_toggle_node)
     bpy.utils.register_class(SIMPLE_OT_analyze_ids)
+    bpy.utils.register_class(SIMPLE_OT_match_ids)  # Neuer Operator
     bpy.utils.register_class(SIMPLE_PT_ids_panel)
     
     bpy.types.Scene.simple_file1_loaded = BoolProperty(default=False)
@@ -386,17 +474,23 @@ def register():
     bpy.types.Scene.simple_selected_index = IntProperty(default=-1)
     bpy.types.Scene.simple_show_tree = BoolProperty(default=False)
     
-    print("✅ IDS Match Panel registered - Improved Tree!")
+    # Match Results Properties
+    bpy.types.Scene.simple_match_results = StringProperty(default="")
+    bpy.types.Scene.simple_has_match_results = BoolProperty(default=False)
+    bpy.types.Scene.simple_matched_entity = StringProperty(default="")
+    
+    print("IDS Match Panel registered with Match functionality!")
 
 def unregister():
     props = ['simple_file1_loaded', 'simple_file1_name', 'simple_file1_path',
              'simple_file2_loaded', 'simple_file2_name', 'simple_file2_path',
-             'simple_tree_nodes', 'simple_selected_index', 'simple_show_tree']
+             'simple_tree_nodes', 'simple_selected_index', 'simple_show_tree',
+             'simple_match_results', 'simple_has_match_results', 'simple_matched_entity']
     for prop in props:
         if hasattr(bpy.types.Scene, prop):
             delattr(bpy.types.Scene, prop)
     
-    classes = [SIMPLE_PT_ids_panel, SIMPLE_OT_analyze_ids, SIMPLE_OT_toggle_node,
+    classes = [SIMPLE_PT_ids_panel, SIMPLE_OT_match_ids, SIMPLE_OT_analyze_ids, SIMPLE_OT_toggle_node,
                SIMPLE_OT_load_file2, SIMPLE_OT_load_file1, SimpleTreeNode]
     for cls in classes:
         try:
@@ -406,7 +500,7 @@ def unregister():
 
 def clean():
     unregister()
-    print("🧹 Cleaned!")
+    print("Cleaned!")
 
 if __name__ == "__main__":
     clean()

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+	<info>
+		<title>IDS des Planers</title>
+		<version>4</version>
+		<description>"Test"</description>
+		<date>2025-07-02+02:00</date>
+		<purpose>Test</purpose>
+		<milestone>Test</milestone>
+	</info>
+	<specifications>
+		<specification name="Spaces" ifcVersion="IFC4">
+			<applicability minOccurs="0" maxOccurs="unbounded">
+				<entity>
+					<name>
+						<simpleValue>IFCSPACE</simpleValue>
+					</name>
+					<predefinedType>
+						<simpleValue>USERDEFINED</simpleValue>
+					</predefinedType>
+				</entity>
+			</applicability>
+			<requirements>
+				<property cardinality="required" dataType="IFCLABEL">
+					<propertySet>
+						<simpleValue>Pset_SpaceCommon</simpleValue>
+					</propertySet>
+					<baseName>
+						<simpleValue>Reference</simpleValue>
+					</baseName>
+				</property>
+				<property cardinality="required" dataType="IFCLABEL">
+					<propertySet>
+						<simpleValue>Pset_SpaceCommon</simpleValue>
+					</propertySet>
+					<baseName>
+						<simpleValue>Status</simpleValue>
+					</baseName>
+				</property>
+				<property cardinality="required" dataType="IFCLABEL">
+					<propertySet>
+						<simpleValue>AllplanAttributes</simpleValue>
+					</propertySet>
+					<baseName>
+						<simpleValue>Allright_Bauteil_ID</simpleValue>
+					</baseName>
+				</property>
+			</requirements>
+		</specification>
+	</specifications>
+</ids>

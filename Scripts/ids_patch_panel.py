@@ -4,7 +4,7 @@ IDS PATCH Panel - Collaboration Style
 =====================================
 
 Erstellt ein IDS PATCH Panel analog zum IFC Tester Panel.
-Mit integrierter IFC Property Fix Funktionalität.
+Mit integrierter IFC Property Fix Funktionalitaet.
 """
 
 import bpy
@@ -99,6 +99,11 @@ def handle_property_single_value(property_single_value, properties_values):
                             new_value = type(property_value)(new_value)
                             property_single_value.NominalValue.wrappedValue = new_value
 
+
+# =====================================================
+# OPERATORS
+# =====================================================
+
 class IDS_PATCH_OT_patch_ifc(Operator):
     """Patch IFC file with IDS requirements."""
     bl_idname = "ids_patch.patch_ifc"
@@ -133,11 +138,101 @@ class IDS_PATCH_OT_patch_ifc(Operator):
             # Process IFC file with JSON config
             output_file = process_ifc_file(ifc_path, json_config)
             
-            self.report({'INFO'}, f"🔧 IFC patching completed! Output: {Path(output_file).name}")
+            # Store output file path for download
+            scene.ids_patch_output_file = output_file
+            scene.ids_patch_has_output = True
+            
+            self.report({'INFO'}, f"IFC patching completed! Output: {Path(output_file).name}")
             return {'FINISHED'}
             
         except Exception as e:
             self.report({'ERROR'}, f"Patching failed: {str(e)}")
+            return {'CANCELLED'}
+
+
+class IDS_PATCH_OT_save_fixed_ifc(Operator):
+    """Save the fixed IFC file to a selected location."""
+    bl_idname = "ids_patch.save_fixed_ifc"
+    bl_label = "Save Fixed IFC"
+    bl_description = "Save the patched IFC file to a chosen location"
+    
+    filepath: StringProperty(subtype="FILE_PATH")
+    filter_glob: StringProperty(default="*.ifc", options={'HIDDEN'})
+    
+    def execute(self, context):
+        scene = context.scene
+        
+        # Get the output file path from scene property
+        output_file = getattr(scene, 'ids_patch_output_file', '')
+        
+        if not output_file or not Path(output_file).exists():
+            self.report({'ERROR'}, "No output file available for saving")
+            return {'CANCELLED'}
+        
+        try:
+            # Copy file to selected location
+            import shutil
+            shutil.copy2(output_file, self.filepath)
+            
+            # Update scene with saved file location
+            scene.ids_patch_saved_file_path = self.filepath
+            scene.ids_patch_file_saved = True
+            
+            filename = Path(self.filepath).name
+            self.report({'INFO'}, f"Fixed IFC saved: {filename}")
+            return {'FINISHED'}
+            
+        except Exception as e:
+            self.report({'ERROR'}, f"Save failed: {str(e)}")
+            return {'CANCELLED'}
+    
+    def invoke(self, context, event):
+        scene = context.scene
+        
+        # Get original filename and create suggested name
+        original_path = getattr(scene, 'ids_patch_ifc_file_path', '')
+        if original_path:
+            original_name = Path(original_path).stem
+            suggested_name = f"{original_name}_patched.ifc"
+            self.filepath = str(Path.home() / "Downloads" / suggested_name)
+        else:
+            self.filepath = str(Path.home() / "Downloads" / "patched_model.ifc")
+        
+        context.window_manager.fileselect_add(self)
+        return {'RUNNING_MODAL'}
+
+
+class IDS_PATCH_OT_open_saved_file(Operator):
+    """Open the saved fixed IFC file location."""
+    bl_idname = "ids_patch.open_saved_file"
+    bl_label = "Open File Location"
+    bl_description = "Open the folder containing the saved fixed IFC file"
+    
+    def execute(self, context):
+        scene = context.scene
+        saved_path = getattr(scene, 'ids_patch_saved_file_path', '')
+        
+        if not saved_path or not Path(saved_path).exists():
+            self.report({'ERROR'}, "No saved file found")
+            return {'CANCELLED'}
+        
+        try:
+            import subprocess
+            import sys
+            
+            # Open file location based on OS
+            file_path = Path(saved_path)
+            if sys.platform == "win32":
+                subprocess.run(['explorer', '/select,', str(file_path)])
+            elif sys.platform == "darwin":  # macOS
+                subprocess.run(['open', '-R', str(file_path)])
+            else:  # Linux
+                subprocess.run(['xdg-open', str(file_path.parent)])
+            
+            return {'FINISHED'}
+            
+        except Exception as e:
+            self.report({'ERROR'}, f"Failed to open location: {str(e)}")
             return {'CANCELLED'}
 
 
@@ -160,7 +255,7 @@ class IDS_PATCH_OT_load_ifc_file(Operator):
         scene.ids_patch_ifc_file_loaded = True
         
         filename = Path(self.filepath).name
-        self.report({'INFO'}, f"✅ IFC loaded: {filename}")
+        self.report({'INFO'}, f"IFC loaded: {filename}")
         return {'FINISHED'}
     
     def invoke(self, context, event):
@@ -187,13 +282,17 @@ class IDS_PATCH_OT_load_ids_file(Operator):
         scene.ids_patch_ids_file_loaded = True
         
         filename = Path(self.filepath).name
-        self.report({'INFO'}, f"✅ IDS patch loaded: {filename}")
+        self.report({'INFO'}, f"IDS loaded: {filename}")
         return {'FINISHED'}
     
     def invoke(self, context, event):
         context.window_manager.fileselect_add(self)
         return {'RUNNING_MODAL'}
 
+
+# =====================================================
+# PANELS
+# =====================================================
 
 class IDS_PATCH_PT_panel(Panel):
     """IDS PATCH panel in Collaboration."""
@@ -230,7 +329,7 @@ class IDS_PATCH_PT_panel(Panel):
         
         # IDS File row
         row = col.row(align=True)
-        row.label(text="IDS Patch File", icon='FILE_TEXT')
+        row.label(text="IDS File", icon='FILE_TEXT')
         
         # File path field (read-only display)
         sub = row.row(align=True)
@@ -239,7 +338,7 @@ class IDS_PATCH_PT_panel(Panel):
             filename = Path(getattr(scene, 'ids_patch_ids_file_path', '')).name
             sub.label(text=filename[:30] + "..." if len(filename) > 30 else filename)
         else:
-            sub.label(text="No IDS patch file loaded")
+            sub.label(text="No IDS match file loaded")
         
         # Load button
         row.operator("ids_patch.load_ids_file", text="", icon='FILEBROWSER')
@@ -253,15 +352,44 @@ class IDS_PATCH_PT_panel(Panel):
             
             # Patch button
             patch_row = col.row(align=True)
-            patch_row.scale_y = 1.5  # Größerer Button
-            patch_row.operator("ids_patch.patch_ifc", text="🔧 Patch IFC", icon='MODIFIER')
+            patch_row.scale_y = 1.5  # Groesserer Button
+            patch_row.operator("ids_patch.patch_ifc", text="Patch IFC", icon='MODIFIER')
+        
+        # Save & Open Buttons - nur wenn Output verfuegbar ist
+        if getattr(scene, 'ids_patch_has_output', False):
+            # Separator
+            col.separator()
+            
+            # Save button row
+            save_row = col.row(align=True)
+            save_row.scale_y = 1.3
+            save_row.operator("ids_patch.save_fixed_ifc", text="Save Fixed IFC", icon='FILE_TICK')
+            
+            # If file has been saved, show open location button
+            if getattr(scene, 'ids_patch_file_saved', False):
+                save_row.operator("ids_patch.open_saved_file", text="", icon='FOLDER_REDIRECT')
+                
+                # Show saved file info
+                saved_path = getattr(scene, 'ids_patch_saved_file_path', '')
+                if saved_path:
+                    info_row = col.row()
+                    info_row.scale_y = 0.8
+                    saved_filename = Path(saved_path).name
+                    info_row.label(text=f"Saved: {saved_filename[:25]}..." if len(saved_filename) > 25 else f"Saved: {saved_filename}", 
+                                 icon='CHECKMARK')
 
+
+# =====================================================
+# REGISTRATION
+# =====================================================
 
 def register():
     """Register IDS PATCH panel."""
     bpy.utils.register_class(IDS_PATCH_OT_load_ifc_file)
     bpy.utils.register_class(IDS_PATCH_OT_load_ids_file)
-    bpy.utils.register_class(IDS_PATCH_OT_patch_ifc)  # Neuer Operator
+    bpy.utils.register_class(IDS_PATCH_OT_patch_ifc)
+    bpy.utils.register_class(IDS_PATCH_OT_save_fixed_ifc)
+    bpy.utils.register_class(IDS_PATCH_OT_open_saved_file)
     bpy.utils.register_class(IDS_PATCH_PT_panel)
     
     # Properties for file paths
@@ -286,7 +414,31 @@ def register():
         default=False
     )
     
-    print("✅ IDS PATCH Panel registered under Collaboration!")
+    # Output file tracking
+    bpy.types.Scene.ids_patch_output_file = StringProperty(
+        name="Output File Path",
+        description="Path to the generated fixed IFC file",
+        default=""
+    )
+    bpy.types.Scene.ids_patch_has_output = BoolProperty(
+        name="Has Output File",
+        description="Whether a fixed IFC file is available for download",
+        default=False
+    )
+    
+    # Saved file tracking  
+    bpy.types.Scene.ids_patch_saved_file_path = StringProperty(
+        name="Saved File Path",
+        description="Path where the fixed IFC file was saved",
+        default=""
+    )
+    bpy.types.Scene.ids_patch_file_saved = BoolProperty(
+        name="File Saved",
+        description="Whether the fixed IFC file has been saved",
+        default=False
+    )
+    
+    print("IDS PATCH Panel registered under Collaboration!")
 
 
 def unregister():
@@ -296,34 +448,40 @@ def unregister():
         'ids_patch_ifc_file_path',
         'ids_patch_ifc_file_loaded', 
         'ids_patch_ids_file_path',
-        'ids_patch_ids_file_loaded'
+        'ids_patch_ids_file_loaded',
+        'ids_patch_output_file',
+        'ids_patch_has_output',
+        'ids_patch_saved_file_path',
+        'ids_patch_file_saved'
     ]
     
     for prop in props:
         if hasattr(bpy.types.Scene, prop):
             delattr(bpy.types.Scene, prop)
     
-    # Unregister classes
+    # Unregister classes in reverse order
     classes = [
         IDS_PATCH_PT_panel,
-        IDS_PATCH_OT_patch_ifc,  # Neuer Operator
+        IDS_PATCH_OT_open_saved_file,
+        IDS_PATCH_OT_save_fixed_ifc,
+        IDS_PATCH_OT_patch_ifc,
         IDS_PATCH_OT_load_ids_file,
         IDS_PATCH_OT_load_ifc_file
     ]
     
-    for cls in reversed(classes):
+    for cls in classes:
         try:
             bpy.utils.unregister_class(cls)
         except:
             pass
     
-    print("🧹 IDS PATCH Panel unregistered!")
+    print("IDS PATCH Panel unregistered!")
 
 
 def clean():
     """Clean IDS PATCH panel."""
     unregister()
-    print("🧹 IDS PATCH Panel cleaned!")
+    print("IDS PATCH Panel cleaned!")
 
 
 if __name__ == "__main__":

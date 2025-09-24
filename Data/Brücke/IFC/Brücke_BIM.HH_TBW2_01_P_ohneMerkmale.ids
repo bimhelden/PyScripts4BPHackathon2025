@@ -1,0 +1,728 @@
+<?xml version="1.0" ?>
+<ids:ids xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+  <ids:info>
+    <ids:title>IDS derived from IFC file</ids:title>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification name="IfcBuilding" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCBUILDING</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCLOGICAL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsLandmarked</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCINTEGER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NumberOfStoreys</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="2"/>
+              <xs:maxInclusive value="2"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcBuildingElementProxy" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCBUILDINGELEMENTPROXY</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingElementProxyCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="1x1x1m Pyramiden mit N-Pfeil"/>
+              <xs:enumeration value="BelagAbdichtung_Abdichtung"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Deckschicht_BW"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Deckschicht_ÜKO"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Wasserlauf"/>
+              <xs:enumeration value="BelagAbdichtung_Schutzschicht"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerkopf"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerplatte"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerstab"/>
+              <xs:enumeration value="ErdUndFelsanker_ErdUndFelsanker"/>
+              <xs:enumeration value="Fahrbahnübergang_KonstruktionMitDichtprofil"/>
+              <xs:enumeration value="FahrzeugRueckhaltesystem_Schutzplanke"/>
+              <xs:enumeration value="Fuge_Fuge"/>
+              <xs:enumeration value="Kappe"/>
+              <xs:enumeration value="Kappe_Außen_BW"/>
+              <xs:enumeration value="Kappe_Außen_Flügel"/>
+              <xs:enumeration value="Kappe_Mitte_Flügel"/>
+              <xs:enumeration value="Lager"/>
+              <xs:enumeration value="Symbol_Beschriftung_Laengsachse"/>
+              <xs:enumeration value="Symbol_Beschriftung_Querachse"/>
+              <xs:enumeration value="Symbol_Symbol_BIM.HHLogo"/>
+              <xs:enumeration value="Ueberbau_OrthotropePlatte"/>
+              <xs:enumeration value="Unterbau_Lagersockel"/>
+              <xs:enumeration value="Unterbau_Widerlager_Fluegel_OstNord"/>
+              <xs:enumeration value="Unterbau_Widerlager_Fluegel_OstSued"/>
+              <xs:enumeration value="Unterbau_Widerlager_Wand_Ost"/>
+              <xs:enumeration value="Unterbau_Widerlager_West"/>
+              <xs:enumeration value="Verkehrszeichen_Markierung_BW_Mitte"/>
+              <xs:enumeration value="Verkehrszeichen_Markierung_Rand"/>
+              <xs:enumeration value="Vorspannung_Spannglied_Litze"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="1x1x1m Pyramiden mit N-Pfeil"/>
+              <xs:enumeration value="BelagAbdichtung_Abdichtung"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Deckschicht_BW"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Deckschicht_ÜKO"/>
+              <xs:enumeration value="BelagAbdichtung_Belag_Wasserlauf"/>
+              <xs:enumeration value="BelagAbdichtung_Schutzschicht"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerkopf"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerplatte"/>
+              <xs:enumeration value="ErdUndFelsanker_Ankerstab"/>
+              <xs:enumeration value="ErdUndFelsanker_ErdUndFelsanker"/>
+              <xs:enumeration value="Fahrbahnübergang_KonstruktionMitDichtprofil"/>
+              <xs:enumeration value="FahrzeugRueckhaltesystem_Schutzplanke"/>
+              <xs:enumeration value="Fuge_Fuge"/>
+              <xs:enumeration value="Kappe"/>
+              <xs:enumeration value="Kappe_Außen_BW"/>
+              <xs:enumeration value="Kappe_Außen_Flügel"/>
+              <xs:enumeration value="Kappe_Mitte_Flügel"/>
+              <xs:enumeration value="Lager"/>
+              <xs:enumeration value="Symbol_Beschriftung_Laengsachse"/>
+              <xs:enumeration value="Symbol_Beschriftung_Querachse"/>
+              <xs:enumeration value="Symbol_Symbol_BIM.HHLogo"/>
+              <xs:enumeration value="Ueberbau_OrthotropePlatte"/>
+              <xs:enumeration value="Unterbau_Lagersockel"/>
+              <xs:enumeration value="Unterbau_Widerlager_Fluegel_OstNord"/>
+              <xs:enumeration value="Unterbau_Widerlager_Fluegel_OstSued"/>
+              <xs:enumeration value="Unterbau_Widerlager_Wand_Ost"/>
+              <xs:enumeration value="Unterbau_Widerlager_West"/>
+              <xs:enumeration value="Verkehrszeichen_Markierung_BW_Mitte"/>
+              <xs:enumeration value="Verkehrszeichen_Markierung_Rand"/>
+              <xs:enumeration value="Vorspannung_Spannglied_Litze"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:material instructions="Extrahiert aus Material List, Material Single">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Straszenachse"/>
+              <xs:enumeration value="Kunststoff - grau 70-70-70"/>
+              <xs:enumeration value="Vorgabe Neues Material(1)"/>
+              <xs:enumeration value="Deckschicht - Asphalt"/>
+              <xs:enumeration value="Bitumenabdichtung"/>
+              <xs:enumeration value="Stahl Üko"/>
+              <xs:enumeration value="Dichtprofil ÜKO"/>
+              <xs:enumeration value="Vorgabe Neues Material"/>
+              <xs:enumeration value="Lagerplatte"/>
+              <xs:enumeration value="Lagerkissen"/>
+              <xs:enumeration value="Anker_Kopf"/>
+              <xs:enumeration value="Stahlbeton - Ortbeton"/>
+              <xs:enumeration value="Metall - Edelstahl satiniert"/>
+              <xs:enumeration value="Anker_Zugglied"/>
+              <xs:enumeration value="Nullpunktobjekt_Hellrot"/>
+              <xs:enumeration value="Fuge"/>
+              <xs:enumeration value="Schutzschicht - Asphalt"/>
+              <xs:enumeration value="&lt;Unnamed&gt;"/>
+              <xs:enumeration value="Fahrbahnmarkierung"/>
+              <xs:enumeration value="Beschriftung Stationierung"/>
+              <xs:enumeration value="Nullpunktobjekt_Dunkelgrau"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:material>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcBuildingStorey" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCBUILDINGSTOREY</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_AirSideSystemInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Objektebene"/>
+              <xs:enumeration value="Ueberbausegment"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCLOGICAL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingStoreyCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AboveGround</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ProductRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Objektebene"/>
+              <xs:enumeration value="Ueberbausegment"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcColumn" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCCOLUMN</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ColumnCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ColumnCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Unterbau_PfeilerStuetze_Schaft"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Unterbau_PfeilerStuetze_Schaft"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcementBarPitchOfColumn</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Unterbau_PfeilerStuetze_Schaft"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:material instructions="Extrahiert aus Material Single">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Stahlbeton - Ortbeton"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:material>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcFlowFitting" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCFLOWFITTING</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_DistributionFlowElementCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Schutzelement_Mantelrohr"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Schutzelement_Mantelrohr"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:material instructions="Extrahiert aus Material Single">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Metall - Stahl"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:material>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcGroup" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCGROUP</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements/>
+    </ids:specification>
+    <ids:specification name="IfcProject" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCPROJECT</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements/>
+    </ids:specification>
+    <ids:specification name="IfcRailing" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCRAILING</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>PredefinedType</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NOTDEFINED"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcRailing" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCRAILING</ids:simpleValue>
+          </ids:name>
+          <ids:predefinedType>
+            <ids:simpleValue>NOTDEFINED</ids:simpleValue>
+          </ids:predefinedType>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="AnderesRueckhaltesystem_Gelaender"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_RailingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Height</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="0.07"/>
+              <xs:maxInclusive value="0.07"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_RailingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_RailingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="AnderesRueckhaltesystem_Gelaender"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:material instructions="Extrahiert aus Material Single">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Geländer"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:material>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcReinforcingBar" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCREINFORCINGBAR</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Bewehrung - Stabstahl 1"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPLANEANGLEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766BendingEndHook</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="90.0"/>
+              <xs:maxInclusive value="90.0"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPLANEANGLEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766BendingStartHook</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="90.0"/>
+              <xs:maxInclusive value="90.0"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeCode</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Bügel Geschlossen"/>
+              <xs:enumeration value="Bügel Torsion"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeParameter_a</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="1.21"/>
+              <xs:maxInclusive value="10.2"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeParameter_b</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="1.21"/>
+              <xs:maxInclusive value="2.81"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeParameter_c</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="1.21"/>
+              <xs:maxInclusive value="10.2"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeParameter_d</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="1.21"/>
+              <xs:maxInclusive value="2.81"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcingBarBendingsISOCD3766Common</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ISOCD3766ShapeParameter_e</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="3.74"/>
+              <xs:maxInclusive value="3.74"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcSite" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCSITE</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements/>
+    </ids:specification>
+    <ids:specification name="IfcSlab" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCSLAB</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>PredefinedType</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="BASESLAB"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:attribute>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcSlab" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCSLAB</ids:simpleValue>
+          </ids:name>
+          <ids:predefinedType>
+            <ids:simpleValue>BASESLAB</ids:simpleValue>
+          </ids:predefinedType>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_QuantityTakeOff</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfahlschaft_Mitte"/>
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_WL"/>
+              <xs:enumeration value="Gruendung_WL"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ReinforcementBarPitchOfSlab</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfahlschaft_Mitte"/>
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_WL"/>
+              <xs:enumeration value="Gruendung_WL"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SlabCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfahlschaft_Mitte"/>
+              <xs:enumeration value="Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_Mitte"/>
+              <xs:enumeration value="Gruendung_Sauberkeitsschicht_WL"/>
+              <xs:enumeration value="Gruendung_WL"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+    <ids:specification name="IfcSpace" ifcVersion="IFC2X3">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:entity>
+          <ids:name>
+            <ids:simpleValue>IFCSPACE</ids:simpleValue>
+          </ids:name>
+        </ids:entity>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_AirSideSystemInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Feld_0"/>
+              <xs:enumeration value="Feld_1"/>
+              <xs:enumeration value="Feld_2"/>
+              <xs:enumeration value="UEB_1"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ProductRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Name</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Feld_0"/>
+              <xs:enumeration value="Feld_1"/>
+              <xs:enumeration value="Feld_2"/>
+              <xs:enumeration value="UEB_1"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property dataType="IFCIDENTIFIER">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Reference</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Feld_0 0"/>
+              <xs:enumeration value="Feld_1 1"/>
+              <xs:enumeration value="Feld_2 2"/>
+              <xs:enumeration value="UEB_1 3"/>
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>

@@ -1,0 +1,1631 @@
+{
+  "IFC_Classes": {
+    "IfcBuilding": {
+      "instances": 1,
+      "properties_values": {
+        "Pset_Bauwerk": {
+          "_AbstandUeberbautenTeilbauwerke": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0.05 Länge in [m]"
+            ],
+            "value_instances": {
+              "0.05 Länge in [m]": 1
+            }
+          },
+          "_AnderesBauwerkNachDIN1076": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 1
+            }
+          },
+          "_Bauwerksart": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Bruecke"
+            ],
+            "value_instances": {
+              "Bruecke": 1
+            }
+          },
+          "_Bauwerksname": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "BIM.Hamburg Beispielbrücke"
+            ],
+            "value_instances": {
+              "BIM.Hamburg Beispielbrücke": 1
+            }
+          },
+          "_Bauwerksnummer": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "5692001"
+            ],
+            "value_instances": {
+              "5692001": 1
+            }
+          },
+          "_Bauwerksrichtung": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "West / Ost"
+            ],
+            "value_instances": {
+              "West / Ost": 1
+            }
+          },
+          "_BemerkungenBaugrund": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 1
+            }
+          },
+          "_Breite": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "10.1 Länge in [m]"
+            ],
+            "value_instances": {
+              "10.1 Länge in [m]": 1
+            }
+          },
+          "_Brueckenflaeche": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "674.0 Fläche in [m2]"
+            ],
+            "value_instances": {
+              "674.0 Fläche in [m2]": 1
+            }
+          },
+          "_Gesamtbreite": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "22.4 Länge in [m]"
+            ],
+            "value_instances": {
+              "22.4 Länge in [m]": 1
+            }
+          },
+          "_Gesamtlaenge": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "30.0 Länge in [m]"
+            ],
+            "value_instances": {
+              "30.0 Länge in [m]": 1
+            }
+          },
+          "_GrundGebirgswasserverhaeltnisse": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 1
+            }
+          },
+          "_InterneBauwerksnummer": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0815"
+            ],
+            "value_instances": {
+              "0815": 1
+            }
+          },
+          "_NaechstgelegenerOrt": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Hamburg"
+            ],
+            "value_instances": {
+              "Hamburg": 1
+            }
+          },
+          "_Stadium": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Bestand"
+            ],
+            "value_instances": {
+              "Bestand": 1
+            }
+          },
+          "_Stationierung": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "in Stationierungsrichtung"
+            ],
+            "value_instances": {
+              "in Stationierungsrichtung": 1
+            }
+          },
+          "_StatischesSystemInBauwerksachse": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Mehrfeldrig mit Durchlaufwirkung"
+            ],
+            "value_instances": {
+              "Mehrfeldrig mit Durchlaufwirkung": 1
+            }
+          },
+          "_StatischesSystemQuerZurBauwerksachse": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Plattenbalken / Trägerrost (mit Querverteilung)"
+            ],
+            "value_instances": {
+              "Plattenbalken / Trägerrost (mit Querverteilung)": 1
+            }
+          },
+          "_StatusHohlkoerper": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 1
+            }
+          },
+          "_StatusKoppelfugen": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 1
+            }
+          },
+          "_StatusSpannungsrisskorrosion": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 1
+            }
+          },
+          "_Teilbauwerksnummer": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "2"
+            ],
+            "value_instances": {
+              "2": 1
+            }
+          },
+          "_Ueberschuettet": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 1
+            }
+          },
+          "_UeberschuettungshoeheMax": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1
+            }
+          },
+          "_UeberschuettungshoeheMin": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1
+            }
+          },
+          "_UnterVerkehr": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "True"
+            ],
+            "value_instances": {
+              "True": 1
+            }
+          },
+          "_Zustaendigkeit": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "BIM.Hamburg"
+            ],
+            "value_instances": {
+              "BIM.Hamburg": 1
+            }
+          }
+        },
+        "Pset_BuildingCommon": {
+          "IsLandmarked": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "UNKNOWN"
+            ],
+            "value_instances": {
+              "UNKNOWN": 1
+            }
+          },
+          "NumberOfStoreys": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "2"
+            ],
+            "value_instances": {
+              "2": 1
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcBuildingElementProxy": {
+      "instances": 85,
+      "properties_values": {
+        "Material List": {
+          "Name": {
+            "instances_with_value": 162,
+            "unique_values": [
+              "Anker_Kopf",
+              "Anker_Zugglied",
+              "Beschriftung Stationierung",
+              "Dichtprofil ÜKO",
+              "Fahrbahnmarkierung",
+              "Kunststoff - grau 70-70-70",
+              "Lagerkissen",
+              "Lagerplatte",
+              "Metall - Edelstahl satiniert",
+              "Nullpunktobjekt_Dunkelgrau",
+              "Nullpunktobjekt_Hellrot",
+              "Stahl Üko",
+              "Stahlbeton - Ortbeton",
+              "Straszenachse",
+              "Vorgabe Neues Material",
+              "Vorgabe Neues Material(1)"
+            ],
+            "value_instances": {
+              "Anker_Kopf": 5,
+              "Anker_Zugglied": 8,
+              "Beschriftung Stationierung": 18,
+              "Dichtprofil ÜKO": 1,
+              "Fahrbahnmarkierung": 7,
+              "Kunststoff - grau 70-70-70": 11,
+              "Lagerkissen": 6,
+              "Lagerplatte": 7,
+              "Metall - Edelstahl satiniert": 73,
+              "Nullpunktobjekt_Dunkelgrau": 3,
+              "Nullpunktobjekt_Hellrot": 2,
+              "Stahl Üko": 4,
+              "Stahlbeton - Ortbeton": 8,
+              "Straszenachse": 6,
+              "Vorgabe Neues Material": 2,
+              "Vorgabe Neues Material(1)": 1
+            }
+          }
+        },
+        "Material Single": {
+          "Name": {
+            "instances_with_value": 60,
+            "unique_values": [
+              "<Unnamed>",
+              "Anker_Kopf",
+              "Bitumenabdichtung",
+              "Deckschicht - Asphalt",
+              "Fahrbahnmarkierung",
+              "Fuge",
+              "Metall - Edelstahl satiniert",
+              "Schutzschicht - Asphalt",
+              "Stahlbeton - Ortbeton"
+            ],
+            "value_instances": {
+              "<Unnamed>": 8,
+              "Anker_Kopf": 8,
+              "Bitumenabdichtung": 2,
+              "Deckschicht - Asphalt": 3,
+              "Fahrbahnmarkierung": 2,
+              "Fuge": 17,
+              "Metall - Edelstahl satiniert": 1,
+              "Schutzschicht - Asphalt": 2,
+              "Stahlbeton - Ortbeton": 17
+            }
+          }
+        },
+        "Pset_BuildingElementProxyCommon": {
+          "Reference": {
+            "instances_with_value": 85,
+            "unique_values": [
+              "1x1x1m Pyramiden mit N-Pfeil",
+              "BelagAbdichtung_Abdichtung",
+              "BelagAbdichtung_Belag_Deckschicht_BW",
+              "BelagAbdichtung_Belag_Deckschicht_ÜKO",
+              "BelagAbdichtung_Belag_Wasserlauf",
+              "BelagAbdichtung_Schutzschicht",
+              "ErdUndFelsanker_Ankerkopf",
+              "ErdUndFelsanker_Ankerplatte",
+              "ErdUndFelsanker_Ankerstab",
+              "ErdUndFelsanker_ErdUndFelsanker",
+              "Fahrbahnübergang_KonstruktionMitDichtprofil",
+              "FahrzeugRueckhaltesystem_Schutzplanke",
+              "Fuge_Fuge",
+              "Kappe",
+              "Kappe_Außen_BW",
+              "Kappe_Außen_Flügel",
+              "Kappe_Mitte_Flügel",
+              "Lager",
+              "Symbol_Beschriftung_Laengsachse",
+              "Symbol_Beschriftung_Querachse",
+              "Symbol_Symbol_BIM.HHLogo",
+              "Ueberbau_OrthotropePlatte",
+              "Unterbau_Lagersockel",
+              "Unterbau_Widerlager_Fluegel_OstNord",
+              "Unterbau_Widerlager_Fluegel_OstSued",
+              "Unterbau_Widerlager_Wand_Ost",
+              "Unterbau_Widerlager_West",
+              "Verkehrszeichen_Markierung_BW_Mitte",
+              "Verkehrszeichen_Markierung_Rand",
+              "Vorspannung_Spannglied_Litze"
+            ],
+            "value_instances": {
+              "1x1x1m Pyramiden mit N-Pfeil": 1,
+              "BelagAbdichtung_Abdichtung": 2,
+              "BelagAbdichtung_Belag_Deckschicht_BW": 1,
+              "BelagAbdichtung_Belag_Deckschicht_ÜKO": 1,
+              "BelagAbdichtung_Belag_Wasserlauf": 1,
+              "BelagAbdichtung_Schutzschicht": 2,
+              "ErdUndFelsanker_Ankerkopf": 4,
+              "ErdUndFelsanker_Ankerplatte": 4,
+              "ErdUndFelsanker_Ankerstab": 4,
+              "ErdUndFelsanker_ErdUndFelsanker": 4,
+              "Fahrbahnübergang_KonstruktionMitDichtprofil": 1,
+              "FahrzeugRueckhaltesystem_Schutzplanke": 2,
+              "Fuge_Fuge": 17,
+              "Kappe": 1,
+              "Kappe_Außen_BW": 1,
+              "Kappe_Außen_Flügel": 2,
+              "Kappe_Mitte_Flügel": 2,
+              "Lager": 6,
+              "Symbol_Beschriftung_Laengsachse": 3,
+              "Symbol_Beschriftung_Querachse": 3,
+              "Symbol_Symbol_BIM.HHLogo": 1,
+              "Ueberbau_OrthotropePlatte": 1,
+              "Unterbau_Lagersockel": 6,
+              "Unterbau_Widerlager_Fluegel_OstNord": 1,
+              "Unterbau_Widerlager_Fluegel_OstSued": 1,
+              "Unterbau_Widerlager_Wand_Ost": 1,
+              "Unterbau_Widerlager_West": 1,
+              "Verkehrszeichen_Markierung_BW_Mitte": 1,
+              "Verkehrszeichen_Markierung_Rand": 2,
+              "Vorspannung_Spannglied_Litze": 8
+            }
+          }
+        },
+        "Pset_Georeferenzierung": {
+          "_Hoehenstatus": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "HS170"
+            ],
+            "value_instances": {
+              "HS170": 1
+            }
+          },
+          "_Hoehensystem": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "DHHN16"
+            ],
+            "value_instances": {
+              "DHHN16": 1
+            }
+          },
+          "_Koordinatensystem": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "ETRS89-GK"
+            ],
+            "value_instances": {
+              "ETRS89-GK": 1
+            }
+          },
+          "_Lagestatus": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "LS320"
+            ],
+            "value_instances": {
+              "LS320": 1
+            }
+          }
+        },
+        "Pset_Hyperlink": {
+          "_Hyperlink_001": {
+            "instances_with_value": 8,
+            "unique_values": [
+              "https://www.google.de/search?q=elastomerlager&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjzrtTy0dfZAhVrDsAKHVBzCFUQ_AUICigB&biw=1680&bih=946",
+              "undefiniert",
+              "www.bim.hamburg.de"
+            ],
+            "value_instances": {
+              "https://www.google.de/search?q=elastomerlager&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjzrtTy0dfZAhVrDsAKHVBzCFUQ_AUICigB&biw=1680&bih=946": 6,
+              "undefiniert": 1,
+              "www.bim.hamburg.de": 1
+            }
+          },
+          "_Hyperlink_001_Bemerkung": {
+            "instances_with_value": 8,
+            "unique_values": [
+              "Bilder Elastomerlager",
+              "Homepage von BIM.Hamburg",
+              "undefiniert"
+            ],
+            "value_instances": {
+              "Bilder Elastomerlager": 6,
+              "Homepage von BIM.Hamburg": 1,
+              "undefiniert": 1
+            }
+          }
+        },
+        "Pset_Modellinformation": {
+          "_ArtFachmodell": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Ingenieurbau/ Bauwerk"
+            ],
+            "value_instances": {
+              "Ingenieurbau/ Bauwerk": 1
+            }
+          },
+          "_ArtTeilmodell": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Bruecke"
+            ],
+            "value_instances": {
+              "Bruecke": 1
+            }
+          },
+          "_Auftraggeber": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "BIM.Hamburg"
+            ],
+            "value_instances": {
+              "BIM.Hamburg": 1
+            }
+          },
+          "_Erstelldatum": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "2024-09-18"
+            ],
+            "value_instances": {
+              "2024-09-18": 1
+            }
+          },
+          "_Ersteller": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "BIM.HH | HPA, Dombeck"
+            ],
+            "value_instances": {
+              "BIM.HH | HPA, Dombeck": 1
+            }
+          },
+          "_GemObjektkatalog": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Ingenieurbau_V005; Baustoff_V001"
+            ],
+            "value_instances": {
+              "Ingenieurbau_V005; Baustoff_V001": 1
+            }
+          },
+          "_Projektname": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "BIM.Hamburg, Beispielmodell"
+            ],
+            "value_instances": {
+              "BIM.Hamburg, Beispielmodell": 1
+            }
+          },
+          "_Projektnummer": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0815"
+            ],
+            "value_instances": {
+              "0815": 1
+            }
+          }
+        },
+        "Pset_Objektinformation": {
+          "_ArtUnterbau": {
+            "instances_with_value": 6,
+            "unique_values": [
+              "Pfeiler / Stuetze",
+              "Widerlager"
+            ],
+            "value_instances": {
+              "Pfeiler / Stuetze": 2,
+              "Widerlager": 4
+            }
+          },
+          "_BeweglichkeitLager": {
+            "instances_with_value": 6,
+            "unique_values": [
+              "beweglich",
+              "fest"
+            ],
+            "value_instances": {
+              "beweglich": 4,
+              "fest": 2
+            }
+          },
+          "_IDEbene2": {
+            "instances_with_value": 12,
+            "unique_values": [
+              "BeweglichesLager",
+              "FestesLager",
+              "PfeilerStuetze",
+              "Widerlager"
+            ],
+            "value_instances": {
+              "BeweglichesLager": 4,
+              "FestesLager": 2,
+              "PfeilerStuetze": 2,
+              "Widerlager": 4
+            }
+          },
+          "_IDEbene3": {
+            "instances_with_value": 12,
+            "unique_values": [
+              "BeweglichesLager",
+              "FestesLager",
+              "Lagersockel"
+            ],
+            "value_instances": {
+              "BeweglichesLager": 4,
+              "FestesLager": 2,
+              "Lagersockel": 6
+            }
+          },
+          "_MitwirkungDesGelaenders": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "False",
+              "True"
+            ],
+            "value_instances": {
+              "False": 1,
+              "True": 1
+            }
+          }
+        },
+        "Pset_ProvisionForVoid": {
+          "Depth": {
+            "instances_with_value": 49,
+            "unique_values": [
+              "0.02 Länge (positiv, >0) in [m]",
+              "0.04 Länge (positiv, >0) in [m]",
+              "0.05 Länge (positiv, >0) in [m]",
+              "0.1 Länge (positiv, >0) in [m]",
+              "0.15 Länge (positiv, >0) in [m]",
+              "10.7 Länge (positiv, >0) in [m]",
+              "10.8 Länge (positiv, >0) in [m]",
+              "31.2 Länge (positiv, >0) in [m]",
+              "6.65 Länge (positiv, >0) in [m]",
+              "7.0 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "0.02 Länge (positiv, >0) in [m]": 3,
+              "0.04 Länge (positiv, >0) in [m]": 21,
+              "0.05 Länge (positiv, >0) in [m]": 6,
+              "0.1 Länge (positiv, >0) in [m]": 6,
+              "0.15 Länge (positiv, >0) in [m]": 4,
+              "10.7 Länge (positiv, >0) in [m]": 1,
+              "10.8 Länge (positiv, >0) in [m]": 1,
+              "31.2 Länge (positiv, >0) in [m]": 3,
+              "6.65 Länge (positiv, >0) in [m]": 2,
+              "7.0 Länge (positiv, >0) in [m]": 2
+            }
+          },
+          "Height": {
+            "instances_with_value": 31,
+            "unique_values": [
+              "0.02 Länge (positiv, >0) in [m]",
+              "0.12 Länge (positiv, >0) in [m]",
+              "0.33 Länge (positiv, >0) in [m]",
+              "0.4 Länge (positiv, >0) in [m]",
+              "10.8 Länge (positiv, >0) in [m]",
+              "31.2 Länge (positiv, >0) in [m]",
+              "37.9 Länge (positiv, >0) in [m]",
+              "7.71 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "0.02 Länge (positiv, >0) in [m]": 4,
+              "0.12 Länge (positiv, >0) in [m]": 1,
+              "0.33 Länge (positiv, >0) in [m]": 2,
+              "0.4 Länge (positiv, >0) in [m]": 6,
+              "10.8 Länge (positiv, >0) in [m]": 1,
+              "31.2 Länge (positiv, >0) in [m]": 5,
+              "37.9 Länge (positiv, >0) in [m]": 4,
+              "7.71 Länge (positiv, >0) in [m]": 8
+            }
+          },
+          "Width": {
+            "instances_with_value": 31,
+            "unique_values": [
+              "0.02 Länge (positiv, >0) in [m]",
+              "0.0842 Länge (positiv, >0) in [m]",
+              "0.2 Länge (positiv, >0) in [m]",
+              "0.4 Länge (positiv, >0) in [m]",
+              "2.5 Länge (positiv, >0) in [m]",
+              "7.0 Länge (positiv, >0) in [m]",
+              "7.43 Länge (positiv, >0) in [m]",
+              "7.71 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "0.02 Länge (positiv, >0) in [m]": 13,
+              "0.0842 Länge (positiv, >0) in [m]": 1,
+              "0.2 Länge (positiv, >0) in [m]": 2,
+              "0.4 Länge (positiv, >0) in [m]": 6,
+              "2.5 Länge (positiv, >0) in [m]": 1,
+              "7.0 Länge (positiv, >0) in [m]": 4,
+              "7.43 Länge (positiv, >0) in [m]": 1,
+              "7.71 Länge (positiv, >0) in [m]": 3
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 85,
+            "unique_values": [
+              "1x1x1m Pyramiden mit N-Pfeil",
+              "BelagAbdichtung_Abdichtung",
+              "BelagAbdichtung_Belag_Deckschicht_BW",
+              "BelagAbdichtung_Belag_Deckschicht_ÜKO",
+              "BelagAbdichtung_Belag_Wasserlauf",
+              "BelagAbdichtung_Schutzschicht",
+              "ErdUndFelsanker_Ankerkopf",
+              "ErdUndFelsanker_Ankerplatte",
+              "ErdUndFelsanker_Ankerstab",
+              "ErdUndFelsanker_ErdUndFelsanker",
+              "Fahrbahnübergang_KonstruktionMitDichtprofil",
+              "FahrzeugRueckhaltesystem_Schutzplanke",
+              "Fuge_Fuge",
+              "Kappe",
+              "Kappe_Außen_BW",
+              "Kappe_Außen_Flügel",
+              "Kappe_Mitte_Flügel",
+              "Lager",
+              "Symbol_Beschriftung_Laengsachse",
+              "Symbol_Beschriftung_Querachse",
+              "Symbol_Symbol_BIM.HHLogo",
+              "Ueberbau_OrthotropePlatte",
+              "Unterbau_Lagersockel",
+              "Unterbau_Widerlager_Fluegel_OstNord",
+              "Unterbau_Widerlager_Fluegel_OstSued",
+              "Unterbau_Widerlager_Wand_Ost",
+              "Unterbau_Widerlager_West",
+              "Verkehrszeichen_Markierung_BW_Mitte",
+              "Verkehrszeichen_Markierung_Rand",
+              "Vorspannung_Spannglied_Litze"
+            ],
+            "value_instances": {
+              "1x1x1m Pyramiden mit N-Pfeil": 1,
+              "BelagAbdichtung_Abdichtung": 2,
+              "BelagAbdichtung_Belag_Deckschicht_BW": 1,
+              "BelagAbdichtung_Belag_Deckschicht_ÜKO": 1,
+              "BelagAbdichtung_Belag_Wasserlauf": 1,
+              "BelagAbdichtung_Schutzschicht": 2,
+              "ErdUndFelsanker_Ankerkopf": 4,
+              "ErdUndFelsanker_Ankerplatte": 4,
+              "ErdUndFelsanker_Ankerstab": 4,
+              "ErdUndFelsanker_ErdUndFelsanker": 4,
+              "Fahrbahnübergang_KonstruktionMitDichtprofil": 1,
+              "FahrzeugRueckhaltesystem_Schutzplanke": 2,
+              "Fuge_Fuge": 17,
+              "Kappe": 1,
+              "Kappe_Außen_BW": 1,
+              "Kappe_Außen_Flügel": 2,
+              "Kappe_Mitte_Flügel": 2,
+              "Lager": 6,
+              "Symbol_Beschriftung_Laengsachse": 3,
+              "Symbol_Beschriftung_Querachse": 3,
+              "Symbol_Symbol_BIM.HHLogo": 1,
+              "Ueberbau_OrthotropePlatte": 1,
+              "Unterbau_Lagersockel": 6,
+              "Unterbau_Widerlager_Fluegel_OstNord": 1,
+              "Unterbau_Widerlager_Fluegel_OstSued": 1,
+              "Unterbau_Widerlager_Wand_Ost": 1,
+              "Unterbau_Widerlager_West": 1,
+              "Verkehrszeichen_Markierung_BW_Mitte": 1,
+              "Verkehrszeichen_Markierung_Rand": 2,
+              "Vorspannung_Spannglied_Litze": 8
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcBuildingStorey": {
+      "instances": 2,
+      "properties_values": {
+        "Pset_AirSideSystemInformation": {
+          "Name": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Objektebene",
+              "Ueberbausegment"
+            ],
+            "value_instances": {
+              "Objektebene": 1,
+              "Ueberbausegment": 1
+            }
+          }
+        },
+        "Pset_BuildingStoreyCommon": {
+          "AboveGround": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "UNKNOWN"
+            ],
+            "value_instances": {
+              "UNKNOWN": 2
+            }
+          }
+        },
+        "Pset_ProductRequirements": {
+          "Name": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Objektebene",
+              "Ueberbausegment"
+            ],
+            "value_instances": {
+              "Objektebene": 1,
+              "Ueberbausegment": 1
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcColumn": {
+      "instances": 2,
+      "properties_values": {
+        "Material Single": {
+          "Name": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Stahlbeton - Ortbeton"
+            ],
+            "value_instances": {
+              "Stahlbeton - Ortbeton": 2
+            }
+          }
+        },
+        "Pset_ColumnCommon": {
+          "IsExternal": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 2
+            }
+          },
+          "Reference": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Unterbau_PfeilerStuetze_Schaft"
+            ],
+            "value_instances": {
+              "Unterbau_PfeilerStuetze_Schaft": 2
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Unterbau_PfeilerStuetze_Schaft"
+            ],
+            "value_instances": {
+              "Unterbau_PfeilerStuetze_Schaft": 2
+            }
+          }
+        },
+        "Pset_ReinforcementBarPitchOfColumn": {
+          "Reference": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Unterbau_PfeilerStuetze_Schaft"
+            ],
+            "value_instances": {
+              "Unterbau_PfeilerStuetze_Schaft": 2
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcFlowFitting": {
+      "instances": 6,
+      "properties_values": {
+        "Material Single": {
+          "Name": {
+            "instances_with_value": 6,
+            "unique_values": [
+              "Metall - Stahl"
+            ],
+            "value_instances": {
+              "Metall - Stahl": 6
+            }
+          }
+        },
+        "Pset_DistributionFlowElementCommon": {
+          "Reference": {
+            "instances_with_value": 6,
+            "unique_values": [
+              "Schutzelement_Mantelrohr"
+            ],
+            "value_instances": {
+              "Schutzelement_Mantelrohr": 6
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 6,
+            "unique_values": [
+              "Schutzelement_Mantelrohr"
+            ],
+            "value_instances": {
+              "Schutzelement_Mantelrohr": 6
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcGroup": {
+      "instances": 6,
+      "properties_values": {},
+      "subclasses": []
+    },
+    "IfcProject": {
+      "instances": 1,
+      "properties_values": {},
+      "subclasses": []
+    },
+    "IfcRailing": {
+      "instances": 0,
+      "properties_values": {
+        "01 Subtype": {
+          "PredefinedType": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "NOTDEFINED"
+            ],
+            "value_instances": {
+              "NOTDEFINED": 1
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcRailing:NOTDEFINED": {
+      "instances": 1,
+      "properties_values": {
+        "Material List": {
+          "Name": {
+            "instances_with_value": 25,
+            "unique_values": [
+              "Geländer"
+            ],
+            "value_instances": {
+              "Geländer": 25
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "AnderesRueckhaltesystem_Gelaender"
+            ],
+            "value_instances": {
+              "AnderesRueckhaltesystem_Gelaender": 1
+            }
+          }
+        },
+        "Pset_RailingCommon": {
+          "Height": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0.07 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "0.07 Länge (positiv, >0) in [m]": 1
+            }
+          },
+          "IsExternal": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 1
+            }
+          },
+          "Reference": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "AnderesRueckhaltesystem_Gelaender"
+            ],
+            "value_instances": {
+              "AnderesRueckhaltesystem_Gelaender": 1
+            }
+          }
+        }
+      },
+      "subclasses": [
+        "IfcRailing"
+      ]
+    },
+    "IfcReinforcingBar": {
+      "instances": 144,
+      "properties_values": {
+        "Pset_Baustoff": {
+          "_Baustoff": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Betonstahl"
+            ],
+            "value_instances": {
+              "Betonstahl": 144
+            }
+          },
+          "_BaustoffgueteBetonstahl": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "B 500 B"
+            ],
+            "value_instances": {
+              "B 500 B": 144
+            }
+          },
+          "_BemerkungenBaustoff": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 144
+            }
+          },
+          "_Beschichtung": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "ohne"
+            ],
+            "value_instances": {
+              "ohne": 144
+            }
+          },
+          "_Schweissgeeignet": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "True"
+            ],
+            "value_instances": {
+              "True": 144
+            }
+          },
+          "_Werkstoffnummer": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "1.0438"
+            ],
+            "value_instances": {
+              "1.0438": 144
+            }
+          }
+        },
+        "Pset_Objektinformation": {
+          "_Bemerkung": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 144
+            }
+          },
+          "_IDEbene1": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Bewehrung"
+            ],
+            "value_instances": {
+              "Bewehrung": 144
+            }
+          },
+          "_IDEbene2": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Bewehrung"
+            ],
+            "value_instances": {
+              "Bewehrung": 144
+            }
+          },
+          "_IDEbene3": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Stabstahl"
+            ],
+            "value_instances": {
+              "Stabstahl": 144
+            }
+          },
+          "_LoG": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "400"
+            ],
+            "value_instances": {
+              "400": 144
+            }
+          },
+          "_LoI": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "500"
+            ],
+            "value_instances": {
+              "500": 144
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Bewehrung - Stabstahl 1"
+            ],
+            "value_instances": {
+              "Bewehrung - Stabstahl 1": 144
+            }
+          }
+        },
+        "Pset_ReinforcingBarBendingsISOCD3766Common": {
+          "ISOCD3766BendingEndHook": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "90.0 ebener Winkel in [°]"
+            ],
+            "value_instances": {
+              "90.0 ebener Winkel in [°]": 144
+            }
+          },
+          "ISOCD3766BendingStartHook": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "90.0 ebener Winkel in [°]"
+            ],
+            "value_instances": {
+              "90.0 ebener Winkel in [°]": 144
+            }
+          },
+          "ISOCD3766ShapeCode": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "Bügel Geschlossen",
+              "Bügel Torsion"
+            ],
+            "value_instances": {
+              "Bügel Geschlossen": 131,
+              "Bügel Torsion": 13
+            }
+          },
+          "ISOCD3766ShapeParameter_a": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "1.21 Länge (positiv, >0) in [m]",
+              "10.2 Länge (positiv, >0) in [m]",
+              "2.81 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "1.21 Länge (positiv, >0) in [m]": 118,
+              "10.2 Länge (positiv, >0) in [m]": 13,
+              "2.81 Länge (positiv, >0) in [m]": 13
+            }
+          },
+          "ISOCD3766ShapeParameter_b": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "1.21 Länge (positiv, >0) in [m]",
+              "1.81 Länge (positiv, >0) in [m]",
+              "2.81 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "1.21 Länge (positiv, >0) in [m]": 13,
+              "1.81 Länge (positiv, >0) in [m]": 88,
+              "2.81 Länge (positiv, >0) in [m]": 43
+            }
+          },
+          "ISOCD3766ShapeParameter_c": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "1.21 Länge (positiv, >0) in [m]",
+              "10.2 Länge (positiv, >0) in [m]",
+              "2.81 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "1.21 Länge (positiv, >0) in [m]": 118,
+              "10.2 Länge (positiv, >0) in [m]": 13,
+              "2.81 Länge (positiv, >0) in [m]": 13
+            }
+          },
+          "ISOCD3766ShapeParameter_d": {
+            "instances_with_value": 144,
+            "unique_values": [
+              "1.21 Länge (positiv, >0) in [m]",
+              "1.81 Länge (positiv, >0) in [m]",
+              "2.81 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "1.21 Länge (positiv, >0) in [m]": 13,
+              "1.81 Länge (positiv, >0) in [m]": 88,
+              "2.81 Länge (positiv, >0) in [m]": 43
+            }
+          },
+          "ISOCD3766ShapeParameter_e": {
+            "instances_with_value": 13,
+            "unique_values": [
+              "3.74 Länge (positiv, >0) in [m]"
+            ],
+            "value_instances": {
+              "3.74 Länge (positiv, >0) in [m]": 13
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcSite": {
+      "instances": 1,
+      "properties_values": {},
+      "subclasses": []
+    },
+    "IfcSlab": {
+      "instances": 0,
+      "properties_values": {
+        "01 Subtype": {
+          "PredefinedType": {
+            "instances_with_value": 24,
+            "unique_values": [
+              "FLOOR"
+            ],
+            "value_instances": {
+              "FLOOR": 24
+            }
+          }
+        }
+      },
+      "subclasses": []
+    },
+    "IfcSlab:FLOOR": {
+      "instances": 24,
+      "properties_values": {
+        "Pset_Objektinformation": {
+          "_ArtGruendung": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Flachgruendung"
+            ],
+            "value_instances": {
+              "Flachgruendung": 4
+            }
+          },
+          "_Bemerkung": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 2
+            }
+          },
+          "_IDEbene2": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Flachgruendung"
+            ],
+            "value_instances": {
+              "Flachgruendung": 4
+            }
+          },
+          "_IDEbene3": {
+            "instances_with_value": 2,
+            "unique_values": [
+              "Einzelfundament"
+            ],
+            "value_instances": {
+              "Einzelfundament": 2
+            }
+          },
+          "_LoG": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "200",
+              "400"
+            ],
+            "value_instances": {
+              "200": 3,
+              "400": 1
+            }
+          },
+          "_LoI": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "500"
+            ],
+            "value_instances": {
+              "500": 4
+            }
+          }
+        },
+        "Pset_QuantityTakeOff": {
+          "Reference": {
+            "instances_with_value": 24,
+            "unique_values": [
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte",
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte",
+              "Gruendung_Sauberkeitsschicht_Mitte",
+              "Gruendung_Sauberkeitsschicht_WL",
+              "Gruendung_WL"
+            ],
+            "value_instances": {
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte": 18,
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_WL": 2,
+              "Gruendung_WL": 2
+            }
+          }
+        },
+        "Pset_ReinforcementBarPitchOfSlab": {
+          "Reference": {
+            "instances_with_value": 24,
+            "unique_values": [
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte",
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte",
+              "Gruendung_Sauberkeitsschicht_Mitte",
+              "Gruendung_Sauberkeitsschicht_WL",
+              "Gruendung_WL"
+            ],
+            "value_instances": {
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte": 18,
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_WL": 2,
+              "Gruendung_WL": 2
+            }
+          }
+        },
+        "Pset_SlabCommon": {
+          "IsExternal": {
+            "instances_with_value": 24,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 24
+            }
+          },
+          "PitchAngle": {
+            "instances_with_value": 19,
+            "unique_values": [
+              "0 ebener Winkel in [°]"
+            ],
+            "value_instances": {
+              "0 ebener Winkel in [°]": 19
+            }
+          },
+          "Reference": {
+            "instances_with_value": 24,
+            "unique_values": [
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte",
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte",
+              "Gruendung_Sauberkeitsschicht_Mitte",
+              "Gruendung_Sauberkeitsschicht_WL",
+              "Gruendung_WL"
+            ],
+            "value_instances": {
+              "Gruendung_Pfahlgruendung_Pfahlschaft_Mitte": 18,
+              "Gruendung_Pfahlgruendung_Pfhalkopfplatte_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_Mitte": 1,
+              "Gruendung_Sauberkeitsschicht_WL": 2,
+              "Gruendung_WL": 2
+            }
+          }
+        }
+      },
+      "subclasses": [
+        "IfcSlab"
+      ]
+    },
+    "IfcSpace": {
+      "instances": 4,
+      "properties_values": {
+        "Pset_AirSideSystemInformation": {
+          "Name": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld_0",
+              "Feld_1",
+              "Feld_2",
+              "UEB_1"
+            ],
+            "value_instances": {
+              "Feld_0": 1,
+              "Feld_1": 1,
+              "Feld_2": 1,
+              "UEB_1": 1
+            }
+          }
+        },
+        "Pset_Objektinformation": {
+          "_AnzahlHohlkaestenZellen": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0"
+            ],
+            "value_instances": {
+              "0": 1
+            }
+          },
+          "_AnzahlStege": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "0"
+            ],
+            "value_instances": {
+              "0": 1
+            }
+          },
+          "_BauverfahrenUeberbau": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Balkenartiges und plattenartiges Tragwerk"
+            ],
+            "value_instances": {
+              "Balkenartiges und plattenartiges Tragwerk": 1
+            }
+          },
+          "_BegehbarkeitUeberbau": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "True"
+            ],
+            "value_instances": {
+              "True": 1
+            }
+          },
+          "_Bemerkung": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "undefiniert"
+            ],
+            "value_instances": {
+              "undefiniert": 4
+            }
+          },
+          "_Feldlaenge": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "0 Länge in [m]",
+              "15.0 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1,
+              "15.0 Länge in [m]": 2
+            }
+          },
+          "_IDEbene1": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld",
+              "Ueberbausegment"
+            ],
+            "value_instances": {
+              "Feld": 3,
+              "Ueberbausegment": 1
+            }
+          },
+          "_IDEbene2": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld",
+              "Ueberbausegment"
+            ],
+            "value_instances": {
+              "Feld": 3,
+              "Ueberbausegment": 1
+            }
+          },
+          "_IDEbene3": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld",
+              "Ueberbausegment"
+            ],
+            "value_instances": {
+              "Feld": 3,
+              "Ueberbausegment": 1
+            }
+          },
+          "_KonstruktionshoeheMax": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "1.35 Länge in [m]"
+            ],
+            "value_instances": {
+              "1.35 Länge in [m]": 1
+            }
+          },
+          "_KonstruktionshoeheMin": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "1.35 Länge in [m]"
+            ],
+            "value_instances": {
+              "1.35 Länge in [m]": 1
+            }
+          },
+          "_KreuzungswinkelStuetzung": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "100.0"
+            ],
+            "value_instances": {
+              "100.0": 3
+            }
+          },
+          "_KruemmungUeberbau": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "Nicht gekruemmt (R >= 1500 m), nicht aufgeweitet"
+            ],
+            "value_instances": {
+              "Nicht gekruemmt (R >= 1500 m), nicht aufgeweitet": 1
+            }
+          },
+          "_LichteHoeheMaximal": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "0 Länge in [m]",
+              "4.71 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1,
+              "4.71 Länge in [m]": 2
+            }
+          },
+          "_LichteHoeheMinimal": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "0 Länge in [m]",
+              "4.52 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1,
+              "4.52 Länge in [m]": 2
+            }
+          },
+          "_LichteWeite": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "0 Länge in [m]",
+              "14.1 Länge in [m]"
+            ],
+            "value_instances": {
+              "0 Länge in [m]": 1,
+              "14.1 Länge in [m]": 2
+            }
+          },
+          "_LoG": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "200"
+            ],
+            "value_instances": {
+              "200": 4
+            }
+          },
+          "_LoI": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "500"
+            ],
+            "value_instances": {
+              "500": 4
+            }
+          },
+          "_UnterfuehrungVerkehrsweg": {
+            "instances_with_value": 3,
+            "unique_values": [
+              "False",
+              "True"
+            ],
+            "value_instances": {
+              "False": 1,
+              "True": 2
+            }
+          },
+          "_VorkehrungNachtraeglicheVerstaerkung": {
+            "instances_with_value": 1,
+            "unique_values": [
+              "False"
+            ],
+            "value_instances": {
+              "False": 1
+            }
+          }
+        },
+        "Pset_ProductRequirements": {
+          "Name": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld_0",
+              "Feld_1",
+              "Feld_2",
+              "UEB_1"
+            ],
+            "value_instances": {
+              "Feld_0": 1,
+              "Feld_1": 1,
+              "Feld_2": 1,
+              "UEB_1": 1
+            }
+          }
+        },
+        "Pset_SpaceCommon": {
+          "Reference": {
+            "instances_with_value": 4,
+            "unique_values": [
+              "Feld_0 0",
+              "Feld_1 1",
+              "Feld_2 2",
+              "UEB_1 3"
+            ],
+            "value_instances": {
+              "Feld_0 0": 1,
+              "Feld_1 1": 1,
+              "Feld_2 2": 1,
+              "UEB_1 3": 1
+            }
+          }
+        }
+      },
+      "subclasses": []
+    }
+  }
+}
