@@ -12,7 +12,7 @@ If not, it raises the question: are we using the right tools in the first place?
 
 The **main challenge** is therefore not producing new data, but matching the available data from engineers with the expectations of the owner, namely property names and object types.
 
-![Slide: Challenge](images/challenge.png) 
+![Slide: Challenge](https://github.com/bimhelden/PyScripts4BPHackathon2025/blob/master/Images/challenge.png) 
 
 ## Approach
 
@@ -22,7 +22,7 @@ In our "Bonsai" team with [Volker Krieger](https://www.linkedin.com/in/volker-kr
 2. **IDS Match** – compare requested vs. available data using IDS as the backbone  
 3. **IFC Patch** – apply automated adjustments to the BIM based on the matching definition  
 
-![Slide: Idea](images/idea.png) 
+![Slide: Idea](https://github.com/bimhelden/PyScripts4BPHackathon2025/blob/master/Images/idea.png) 
 
 ## Results
 
