@@ -35,7 +35,5 @@ In our "Bonsai" team with [Volker Krieger](https://www.linkedin.com/in/volker-kr
 - Within the Hackathon team, we are discussing how to further develop this initial idea.  
 - Together with my colleagues at [**AEC3**](https://www.aec3.de/), we are exploring how to actively support this use case.  
 
-## License
-
-[MIT](https://mit-license.org/) – feel free to use, adapt, and contribute.
+Feel free to use, adapt, and contribute.
 
