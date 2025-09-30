@@ -1,6 +1,12 @@
 # "UserDefined" meets native IFC
 
-This repository hosts and publishes the results of our Hackathon project, where we explored how to fulfill data requirements that seem to go beyond the official IFC standard.
+This repository hosts and publishes the results of our Hackathon prototype, where we explored how to fulfill data requirements that seem to go beyond the official IFC standard.
+
+The project was developed by **Team Bonsai** during the [Hackathon 2025 organized by BIM Deutschland](https://www.bimdeutschland.de/veranstaltungen/hackathon-2025).  
+The Hackathon brought together 13 teams and gave us a great chance to share ideas with other developers. You can read more in the [press release of the Federal Ministry for Digital and Transport (BMV)](https://www.bmv.de/SharedDocs/DE/Pressemitteilungen/2025/044-bim-hackathon.html).  
+
+We are proud that our work was recognized with the [**3rd prize**](https://www.bimdeutschland.de/das-sind-die-gewinner-vom-hackathon-2025-zum-bim-portal-des-bundes).  
+
 
 ## Challenge
 
@@ -35,5 +41,5 @@ In our "Bonsai" team with [Volker Krieger](https://www.linkedin.com/in/volker-kr
 - Within the Hackathon team, we are discussing how to further develop this initial idea.  
 - Together with my colleagues at [**AEC3**](https://www.aec3.de/), we are exploring how to actively support this use case.  
 
-Feel free to use, adapt, and contribute.
+Feel free to reach out to us if you are interested in this work or would like to use, adapt and contribute.
 
