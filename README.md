@@ -14,9 +14,9 @@ How can we ensure that data owners and stakeholders get the information they req
 
 Our **hypothesis**:  
 Most of the requested data is not actually missing. It is already created by BIM authors and their tools.  
-If not, it raises the question: are we using the right tools in the first place?
+If not, it raises the question: are we using the right tools and do we follow the right processes in the first place?
 
-The **main challenge** is therefore not producing new data, but matching the available data from engineers with the expectations of the owner, namely property names and object types.
+The **main challenge** is therefore not to generate new data, but to align the data provided by engineers with the owner's expectations - in simple terms, to use the correct property names and object types.
 
 ![Slide: Challenge](https://github.com/bimhelden/PyScripts4BPHackathon2025/blob/master/Images/challenge.png) 
 
