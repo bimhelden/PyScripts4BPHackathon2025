@@ -10,11 +10,11 @@ We are proud that our work was recognized with the [**3rd prize**](https://www.b
 
 ## Challenge
 
-How can we ensure that data owners and stakeholders get the information they require, while staying compliant with IFC?  
+How can we make sure that owners and stakeholders get the data they need, while staying consistent with established design processes supported by BIM authoring tools, ideally relying on native IFC?
 
 Our **hypothesis**:  
-Most of the requested data is not actually missing. It is already created by BIM authors and their tools.  
-If not, it raises the question: are we using the right tools and do we follow the right processes in the first place?
+Most of the requested data isn’t really missing — it’s already created by BIM authors and their tools.
+If that’s not the case, it raises an important question: are we using the right tools, and are we following the right processes in the first place?
 
 The **main challenge** is therefore not to generate new data, but to align the data provided by engineers with the owner's expectations - in simple terms, to use the correct property names and object types.
 
